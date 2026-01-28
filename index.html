@@ -2,74 +2,194 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Unit Outline for COS10026-Web Technology Project">
-    <meta name="keywords" content="COS10026, Web Development, HTML, Unit Outline, Swinburne">
-    <meta name="author" content="Your Name">
-    <title>SOLID TECH - HomePage</title>
+    <meta name="description" content="DevSareh - Roblox Builder Portfolio">
+    <meta name="keywords" content="Roblox, Builder, Game Development, Portfolio">
+    <meta name="author" content="DevSareh">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevSareh - Roblox Builder</title>
+
+        <link rel="icon" type="image/png" href="images/avatar.png"> <!-- For the avatar icon on the main page-->
+
+    
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@200,400,700,500,600,300&display=swap" rel="stylesheet">
+    <!-- This one is for the Clash Display font-->
+    
     <link rel="stylesheet" href="styles.css">
- <!-- This one is for the links to the styles folder for reference purpose-->
+    <!-- This one is for the links to the styles folder for reference purpose-->
 </head>
 <body>
    
     <header>
-       
-        <h1>Welcome to SOLID TECH</h1>
+        <video autoplay muted loop playsinline class="header-video">
+            <source src="images/2026-01-28 14-40-24.mp4" type="video/mp4">
+        </video>
+        <div class="header-overlay"></div>
+        
+        <div class="header-content">
+            <h1>DEVSAREH</h1>
+            <p class="subtitle">Roblox Builder • 4 Years Experience</p>
+        </div>
     </header>
 
-    <!-- nav.inc content goes here -->
     <nav>
-        <!-- Example navigation content -->
         <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#skills">Skills</a></li>
         </ul>
     </nav>
 
-    <h2 class="AboutUs"> About Us </h2> <!--same here too. class used to ensure it does not mix up in the css styling-->
-    <p><strong>Vision:</strong> To be a global leader in data analytics and AI/ML, empowering innovation across industries.</p>
-    <p><strong>Mission:</strong> We believe every individual has the potential to unlock extraordinary talent and drive technological advancement.</p>
+    <div id="portfolio">
+        <h2>My Work</h2>
+        
+        <div class="css-slider">
+            <input type="radio" name="slider" id="slide1" checked>
+            <input type="radio" name="slider" id="slide2">
+            <input type="radio" name="slider" id="slide3">
+            <input type="radio" name="slider" id="slide4">
+            <input type="radio" name="slider" id="slide5">
 
-    <div class="Believe">
-        <h3>What we believe?</h3>
+            <div class="slider-wrapper">
+                <div class="slider-track">
+                    <img src="images/slider1.png" alt="Project 1">
+                    <img src="images/slider2.png" alt="Project 2">
+                    <img src="images/slider3.png" alt="Project 3">
+                    <img src="images/slider4.png" alt="Project 4">
+                    <img src="images/slider5.png" alt="Project 5">
+                </div>
+            </div>
+
+            <div class="nav-arrows">
+                <div class="arrow-left">
+                    <label for="slide5" class="arrow prev">&#10094;</label>
+                    <label for="slide1" class="arrow prev">&#10094;</label>
+                    <label for="slide2" class="arrow prev">&#10094;</label>
+                    <label for="slide3" class="arrow prev">&#10094;</label>
+                    <label for="slide4" class="arrow prev">&#10094;</label>
+                </div>
+                
+                <div class="arrow-right">
+                    <label for="slide2" class="arrow next">&#10095;</label>
+                    <label for="slide3" class="arrow next">&#10095;</label>
+                    <label for="slide4" class="arrow next">&#10095;</label>
+                    <label for="slide5" class="arrow next">&#10095;</label>
+                    <label for="slide1" class="arrow next">&#10095;</label>
+                </div>
+            </div>
+
+            <div class="slider-dots">
+                <label for="slide1" class="dot"></label>
+                <label for="slide2" class="dot"></label>
+                <label for="slide3" class="dot"></label>
+                <label for="slide4" class="dot"></label>
+                <label for="slide5" class="dot"></label>
+            </div>
+        </div>
     </div>
 
-    <div class="Consistency">
-        <h2>Why This?</h2>
-    </div>
-
-    <div class="Creativity">
-        <h2>Why creative?</h2>
-    </div>
-
-    <div class="brown">
-        <div class="Offer"> <!--class for What We Offer title word in box-->
-            <h2>What We Offer</h2>
-        </div>
-
-        <div class="DataCleaning">
-            <h3 class="Clean">Data Cleaning</h3> <!--class for mini box for Data Cleaning-->
-            <p>We organize, refine data into usable type of formats.</p>
-        </div>
-
-        <div class="DataVisual">
-            <h3 class="Data">Data visualization</h3> <!--class for mini box for Data Visual-->
-            <p>We create crystal clear chart, dashboards and reports for our customers.</p>
-        </div>
-
-        <div class="Intelligence">
-            <h3 class="Intel">Data Intelligence</h3> <!--class for Intelligence title word in box-->
-            <p>We turn data for our customers into strategies to help their growth.</p>
-        </div>
-
-        <div class="AI">
-            <h3 class="Integrate"> AI Integration</h3> <!--class for mini box for AI-->
-            <p>Integrate AI Models into current systems, monitoring, scaling and training them.</p>
+    <div id="about">
+        <h2>About Me</h2>
+        
+        <div class="about-cards">
+            <div class="card">
+                <h3>Who am I?</h3>
+                <p>DevSareh - A Roblox Builder for almost 4 years. Computer Science Student, Majoring in Cybersecurity.</p>
+            </div>
+            
+            <div class="card">
+                <h3>What's My Goal?</h3>
+                <p>Work with developers and Roblox groups to bring the best output possible with young, fresh talents worldwide.</p>
+            </div>
         </div>
     </div>
 
-    <!-- footer.inc content goes here -->
+<div id="skills">
+    <h2>My Expertise</h2>
+    
+    <div class="skills">
+        <div class="skill">
+            <h3>Building</h3>
+            <p>Expert in Roblox Studio • 4 Years Experience</p>
+        </div>
+
+        <div class="skill">
+            <h3>3D Modelling</h3>
+            <p>Creating detailed 3D models for games</p>
+        </div>
+
+        <div class="skill">
+            <h3>Designing</h3>
+            <p>A little of designing to my builds</p>
+        </div>
+    </div>
+</div>
+
+    <div id="services">
+        <h2>What I Offer</h2>
+
+        <div class="services">
+            <div class="service">
+                <h3>Builds that are Big</h3>
+                <p>Large-scale projects that make an impact on your game.</p>
+            </div>
+
+            <div class="service">
+                <h3>Colourful</h3>
+                <p>Vibrant and eye-catching designs that stand out.</p>
+            </div>
+
+            <div class="service">
+                <h3>Spectacular</h3>
+                <p>Stunning creations that leave players amazed.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="achievements">
+        <h2>Achievements</h2>
+        
+        <div class="achievements">
+            <div class="achievement">
+                <img src="images/noFilter.webp" alt="Gold Crown">
+                <h3>Gold Crown Of O's</h3>
+                <p>100+ MAU</p>
+            </div>
+
+            <div class="achievement">
+                <img src="images/preview.webp" alt="Bombastic Crown">
+                <h3>Bombastic Crown Of O's</h3>
+                <p>1000+ MAU</p>
+            </div>
+
+            <div class="achievement">
+                <div class="icon">💰</div>
+                <h3>Sales</h3>
+                <p>150+ Sales</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="stats">
+        <div class="stat">
+            <div class="number">4+</div>
+            <p>Years Experience</p>
+        </div>
+        
+        <div class="stat">
+            <div class="number">10+</div>
+            <p>Projects</p>
+        </div>
+    </div>
+
+    <div class="hire">
+        <h2>Currently Not For Hire</h2>
+        <p>Thank you for your interest. I'm currently unavailable for new projects.</p>
+    </div>
+
     <footer>
-        <!-- Example footer content -->
-        <p>&copy; 2025 SOLID TECH. All rights reserved.</p>
+        <p>&copy; 2025 DevSareh. All rights reserved.</p>
     </footer>
+
 </body>
 </html>

@@ -1,252 +1,432 @@
-/* Made By Dayaanan.*/
-
-header h1{
-    background-color: #5f6760;
-    padding: 20px;
-    text-align: left;
-    color: #f5f5f5;
+/* ===== For main page ===== */
+* {
     margin: 0;
-    font-size: 2.5em;
-    font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
-    display: block;
-}
-
-header h2 {
-    color:  whitesmoke;
-    margin: 10px 0 3px 20px;
-    font-size: 1.5em;
-    font-family: Arial, Helvetica, sans-serif; 
-}
-
-/* For the header bg image*/
-header {
-    background: url("images/imagg.png") no-repeat center center fixed;
-    color: white;
-    height: 1000px;
     padding: 0;
-    background-size: cover;
+    box-sizing: border-box;
 }
 
-/* For the text and button */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: black;
+    font-family: "Clash Display", Arial, sans-serif;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* ===== For header part ===== */
+header {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.header-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.header-content {
+    position: relative;
+    text-align: center;
+    z-index: 3;
+}
+
+header h1 {
+    font-size: 150px;
+    font-weight: 700;
+    letter-spacing: -3px;
+    text-transform: uppercase;
+}
+
+.subtitle {
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+/* ===== For Navigations Part ===== */
+nav {
+    position: fixed;
+    top: 30px;
+    right: 40px;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 15px 25px;
+    border-radius: 50px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
 nav a {
     color: white;
-    font-weight: bold;
-    padding: 6px 12px;
-    margin-right: 10px;
-    text-decoration: none
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s;
 }
 
-/* For the border button */
-nav {
-    text-align: right;
-    top: 20px;
-    right: 40px;
-    margin-top: 20px;
+nav a:hover {
+    color: #00ff88;
+}
+
+/* ===== For Sections Part ===== */
+#portfolio, #about, #skills, #services, #achievements {
+    padding: 100px 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 80px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 60px;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+}
+
+/* ===== For Slider Part ===== */
+#portfolio {
+    background: #1a1a1a;
+}
+
+.css-slider {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.css-slider input {
+    display: none;
+}
+
+.slider-wrapper {
+    overflow: hidden;
+    border-radius: 20px;
+    aspect-ratio: 16 / 9;
+}
+
+.slider-track {
+    display: flex;
+    width: 500%;
+    transition: transform 0.6s;
+}
+
+.slider-track img {
+    width: 20%;
+    object-fit: cover;
+}
+
+#slide1:checked ~ .slider-wrapper .slider-track { transform: translateX(0%); }
+#slide2:checked ~ .slider-wrapper .slider-track { transform: translateX(-20%); }
+#slide3:checked ~ .slider-wrapper .slider-track { transform: translateX(-40%); }
+#slide4:checked ~ .slider-wrapper .slider-track { transform: translateX(-60%); }
+#slide5:checked ~ .slider-wrapper .slider-track { transform: translateX(-80%); }
+
+.nav-arrows {
     position: absolute;
-}
-
-/* For the text below About Us */
-p {
-    color: black;
-    font-size: 1.5em;
-    width: 80%;
-    margin: 20px auto; 
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-}
-
-
-/* For the About Us Text */
-.AboutUs { 
-    text-align: center; 
-    margin: 30px 0 15px; 
-    font-size: 2em; 
-    font-weight: bold;
-}
-
-
-/* For the Square Image Box  */
-.Believe {
-    background-image: url(images/immg.png);
-    display: inline-block;
-    border-radius: 20px; /* This creates a curvy square type of design */
-    color: black;
-    width: 300px;
-    height: 300px;
-    background-color: #5f6760;
-    margin: 20px 50px 20px 50px;
-    padding: 30px 30px;
-    border: 2px solid black;
-    font-size: 1em;
-    font-weight: bold;
-    text-align: center;
-}
-
-
-
-/* For the Consistent Image Circle  */
-.Consistency {
-    background-image: url(images/Consistency.png);
-    display: inline-block;
-    border-radius: 50%; /* This creates a circle type of design rather than a simple box */
-    color: black;
-    width: 300px;
-    height: 300px;
-    background-color: #5f6760;
-    margin: 20px 50px 20px 50px; /* Used 4 because I want to control all 4 sides of the circle to give a gap between the square and circle. */
-    padding: 30px 30px;
-    border: 2px solid black;
-    font-size: 1em;
-    font-weight: bold;
-    text-align: center;
-}
-
-/* For the Creativity Image Circle  */
-.Creativity {
-    background-image: url(images/create.png);
-    display: inline-block;
-    border-radius: 50%; /* This creates a circle type of design rather than a simple box */
-    color: black;
-    width: 300px;
-    height: 300px;
-    background-color: #5f6760;
-    margin: 20px 50px 20px 50px; /* Used 4 because I want to control all 4 sides of the circle to give a gap between the square and circle. */
-    padding: 30px 30px;
-    border: 2px solid black;
-    font-size: 1em;
-    font-weight: bold;
-    text-align: center;
-}
-
-/* For the brown bg image  */
-.brown {
-    background-image: url(images/black.png);
-    background-size: cover;
+    top: 50%;
     width: 100%;
-    height: 1350px;
-    background-repeat: no-repeat;
-
-}   
-
-/* For the What we Offer text  */
-.Offer {
-    text-align: center; 
-    margin: 30px 0 15px; 
-    font-size: 2em;      
-    font-weight: bold;    
-    color: black;        
-    padding-top: 50px;   
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    padding: 0 20px;
+    pointer-events: none;
 }
 
-/* For the Data Cleaning Box   */
-.DataCleaning {
-    display: inline-block;
-    border-radius: 20px; /* This creates a curvy square type of design */
+.arrow-left, .arrow-right {
+    pointer-events: all;
+}
+
+.arrow {
+    background: rgba(255, 255, 255, 0.1);
     color: white;
-    width: 300px;
-    height: 350px;
-    background-color: coral;
-    margin: 20px 50px 80px 50px;
-    padding: 30px 30px;
-    border: 2px solid black;
-    font-size: 1em;
-    font-weight: bold;
+    font-size: 30px;
+    padding: 15px 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    transition: background 0.3s;
+}
+
+.arrow:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+#slide1:checked ~ .nav-arrows .arrow-left label:nth-child(1),
+#slide1:checked ~ .nav-arrows .arrow-right label:nth-child(1) { display: block; }
+#slide2:checked ~ .nav-arrows .arrow-left label:nth-child(2),
+#slide2:checked ~ .nav-arrows .arrow-right label:nth-child(2) { display: block; }
+#slide3:checked ~ .nav-arrows .arrow-left label:nth-child(3),
+#slide3:checked ~ .nav-arrows .arrow-right label:nth-child(3) { display: block; }
+#slide4:checked ~ .nav-arrows .arrow-left label:nth-child(4),
+#slide4:checked ~ .nav-arrows .arrow-right label:nth-child(4) { display: block; }
+#slide5:checked ~ .nav-arrows .arrow-left label:nth-child(5),
+#slide5:checked ~ .nav-arrows .arrow-right label:nth-child(5) { display: block; }
+
+.slider-dots {
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 12px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+}
+
+.dot:hover {
+    background: rgba(255, 255, 255, 0.6);
+}
+
+#slide1:checked ~ .slider-dots label:nth-child(1),
+#slide2:checked ~ .slider-dots label:nth-child(2),
+#slide3:checked ~ .slider-dots label:nth-child(3),
+#slide4:checked ~ .slider-dots label:nth-child(4),
+#slide5:checked ~ .slider-dots label:nth-child(5) {
+    background: #00ff88;
+}
+
+/* ===== For About Part ===== */
+.about-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.card {
+    background: #1a1a1a;
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    border-color: #00ff88;
+}
+
+.card h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #00ff88;
+}
+
+.card p {
+    line-height: 1.6;
+    text-align: left;
+}
+
+/* ===== Skills ===== */
+#skills {
+    background: #1a1a1a;
+}
+
+.skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.skill {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s;
+}
+
+.skill:hover {
+    transform: translateY(-10px);
+    border-color: #00ff88;
+}
+
+.skill h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #00ff88;
+}
+
+.skill p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: left;
+}
+
+/* ===== For the service part ===== */
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.service {
+    background: #1a1a1a;
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s;
+}
+
+.service:hover {
+    transform: translateY(-10px);
+    border-color: #00ff88;
+}
+
+.service h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #00ff88;
+}
+
+.service p {
+    line-height: 1.6;
+    text-align: left;
+}
+
+/* ===== Achievment part ===== */
+#achievements {
+    background: #1a1a1a;
+}
+
+.achievements {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.achievement {
+    background: black;
+    padding: 40px;
+    border-radius: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.achievement:hover {
+    transform: translateY(-10px);
+    border-color: #00ff88;
+}
+
+.achievement img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+}
+
+.icon {
+    font-size: 100px;
+    margin-bottom: 20px;
+}
+
+.achievement h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #00ff88;
+}
+
+/* ===== For stat part ===== */
+.stats {
+    background: black;
+    padding: 80px 5%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stat {
     text-align: center;
 }
 
-/* For the Data Clean Mini Box   */
-.Clean {
-     border-radius: 20px;
-     display: inline-block;
-     border-radius: 20px;
-     padding: 10px 50px;
-     color: white;
-     background-color: black;
+.number {
+    font-size: 80px;
+    font-weight: 700;
+    color: #00ff88;
+    margin-bottom: 10px;
 }
 
+.stat p {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.7);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
 
-/* For the DataVisual Box  */
-.DataVisual {
-    display: inline-block;
-    border-radius: 20px; /* This creates a curvy square type of design */
-    color: white;
-    width: 300px;
-    height: 350px;
-    background-color: khaki;
-    margin: 20px 50px 80px 50px;
-    padding: 30px 30px;
-    border: 2px solid whitesmoke;
-    font-size: 1em;
-    font-weight: bold;
+/* ===== For the hire part ===== */
+.hire {
+    background: #1a1a1a;
+    padding: 80px 5%;
+    text-align: center;
+    border: 2px solid #00ff88;
+}
+
+.hire h2 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: #00ff88;
+}
+
+.hire p {
+    font-size: 18px;
+}
+
+/* ===== Bottom footer part ===== */
+footer {
+    background: black;
+    padding: 40px;
     text-align: center;
 }
 
-/* For the Data Visual mini box   */
-.Data {
-     border-radius: 20px;
-     display: inline-block;
-     border-radius: 20px;
-     padding: 10px 50px;
-     color: black;
-     background-color: greenyellow;
+footer p {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 14px;
 }
 
-
-/* For the Intelligence box  */
-.Intelligence {
-    display: inline-block;
-    border-radius: 20px; /* This creates a curvy square type of design */
-    color: white;
-    width: 300px;
-    height: 350px;
-    background-color: blanchedalmond;
-    margin: 20px 50px 80px 50px;
-    padding: 30px 30px;
-    border: 2px solid whitesmoke;
-    font-size: 1em;
-    font-weight: bold;
-    text-align: center;
+/* ===== For page responsive ===== */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 80px;
+    }
+    
+    h2 {
+        font-size: 50px;
+    }
+    
+    nav {
+        top: 20px;
+        right: 20px;
+        padding: 10px 20px;
+    }
+    
+    nav ul {
+        gap: 15px;
+    }
 }
-
-/* For the Intelligence mini box */
-.Intel {
-     border-radius: 20px;
-     display: inline-block;
-     border-radius: 20px;
-     padding: 10px 50px;
-     color: black;
-     background-color: green;
-}
-
-/* For the AI Integration full box styling */
-.AI {
-    display: inline-block;
-    border-radius: 20px; /* This creates a curvy square type of design */
-    color: white;
-    width: 300px;
-    height: 350px;
-    background-color: lightgreen;
-    margin: 20px 50px 80px 50px;
-    padding: 30px 30px;
-    border: 2px solid whitesmoke;
-    font-size: 1em;
-    font-weight: bold;
-    text-align: center;
-}
-
-/* For the AI Integration word box styling */
-.Integrate { 
-    border-radius: 20px; 
-    display: inline-block; 
-    padding: 10px 50px; 
-    color: black; 
-    background-color: burlywood; 
-}
-
-
-.header-logo {
-    height: 60px;
-    vertical-align: middle;
-}
-
